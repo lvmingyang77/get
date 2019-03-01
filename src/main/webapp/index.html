@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script type="application/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="application/javascript" src="js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="layui/layui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <style type="text/css">
+        .ulhx li{
+            float: left;
+            margin-right: 10px;
+            text-align: center;
+            height: 60px;
+            padding-top: 2px;
+        }
+        li span{
+            margin-top: 30px;
+        }
+        ul.layui-nav{
+            background-color: #FFFFFF;
+        }
+        body{
+            border: #f9f9f9;
+        }
+
+    </style>
+</head>
+<body style="background-color: #F0F3EF">
+<!--顶部-->
+<div class="row" >
+    <ul class="layui-nav" lay-filter="element">
+        <li class="layui-nav-item"><a href="login.html" style="color: yellow">亲，请登录</a></li>
+        <li class="layui-nav-item"><a href="register.html" style="color: #0C0C0C">免费注册</a></li>
+        <li class="layui-nav-item" style="float: right"><a href="cart.html" style="color: #0C0C0C">购物车</a></li>
+        <li class="layui-nav-item" style="float: right;color: #0C0C0C">首页</li>
+        <li class="layui-nav-item"><a href="https://baike.baidu.com/item/%E9%97%B2%E9%B1%BC/17335724?fr=aladdin" style="color: #0C0C0C" target="_blank">关于</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;" style="color: #0C0C0C">我的闲置</a>
+            <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                <dd><a href="">出售中</a></dd>
+                <dd><a href="">已出售</a></dd>
+                <dd><a href="">我的关注</a></dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+
+<!-- 中部轮播 -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="carousel slide" id="carousel-163691">
+            <ol class="carousel-indicators">
+                <li class="active" data-slide-to="0" data-target="#carousel-163691">
+                </li>
+                <li data-slide-to="1" data-target="#carousel-163691">
+                </li>
+                <li data-slide-to="2" data-target="#carousel-163691">
+                </li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img alt="" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551070000621&di=1b1181e7915bc3ad0bf7fcfeebdebe79&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201704%2F18%2F20170418203454_QtuK2.jpeg" style="width: 100%; height: 50%"/>
+                </div>
+                <div class="item">
+                    <img alt="" src="http://www.kaitao.cn/data/upload/ueditor/20170802/5981d382f338f.jpg" style="width: 100%; height: 50%"/>
+                </div>
+                <div class="item">
+                    <img alt="" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551069985413&di=a10fed4ba7899caef67e13bb6448d9f0&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3221622695%2C1565274043%26fm%3D214%26gp%3D0.jpg" style="width: 100%; height: 50%"/>
+                </div>
+            </div> <a data-slide="prev" href="#carousel-163691" class="left carousel-control">‹</a> <a data-slide="next" href="#carousel-163691" class="right carousel-control">›</a>
+        </div>
+    </div>
+</div>
+<div class="layui-container" style="background-color: #FFFFFF">
+    <div class="layui-row layui-col-space18">
+        <div class="layui-col-md4">
+            <div class="item">
+                <img alt="" src="//img.alicdn.com/tfs/TB1SkxunMDqK1RjSZSyXXaxEVXa-112-112.png" style="float: left">
+                <div style="float: left; font-size: 24px; font-weight: bold">
+                    <a href="https://www.taobao.com/">淘宝转卖</a>
+                </div></br></br></br>
+                淘宝买过的东西能换钱;他们都在用闲鱼，一个月平均多赚1600+
+            </div>
+        </div>
+        <div class="layui-col-md4" style="float: right">
+            <div class="item">
+                <img alt="" src="//img.alicdn.com/tfs/TB1g54xnMHqK1RjSZFPXXcwapXa-112-112.png" style="float: left">
+                <div style="float: left; font-size: 24px; font-weight: bold">
+                    <a href="https://www.tmall.com/">发布闲置</a>
+                </div></br></br></br>
+                闲置还钱   快速出手
+            </div>
+        </div>
+    </div>
+
+
+    <div class="layui-row" style="text-align: center">
+        <ul class="layui-nav layui-bg-orange">
+            <li class="layui-nav-item"><a href="">新鲜</a></li>
+            <li class="layui-nav-item"><a href="">附件</a></li>
+            <li class="layui-nav-item"><a href="">手机</a></li>
+            <li class="layui-nav-item"><a href="">数码</a></li>
+            <li class="layui-nav-item"><a href="">租房</a></li>
+            <li class="layui-nav-item"><a href="">服装</a></li>
+            <li class="layui-nav-item"><a href="">居家</a></li>
+            <li class="layui-nav-item"><a href="">美妆</a></li>
+            <li class="layui-nav-item"><a href="">运动</a></li>
+            <li class="layui-nav-item"><a href="">家具</a></li>
+            <li class="layui-nav-item"><a href="">玩具乐器</a></li>
+        </ul>
+    </div>
+    <!--4、列表-->
+    <div>
+        <div class="row" id="dvdata">
+            <div class="col-lg-3" v-for="p in obj.data" @click="spdetail(p.id)">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <img :src="p.imgurl" width="100%" height="200px"/>
+                    </div>
+                    <div class="col-lg-6">
+                        <p style="color: red">
+                            <span>￥</span>
+                            <span>{{p.price}}</span>
+                            <span><span class="badge" style="background-color: red">包邮</span></span>
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p style="float: right;margin-right: 10px">
+                            <span>{{p.orders}}</span>
+                            <span>人付款</span>
+                        </p>
+                    </div>
+                    <div class="col-lg-12">
+                        <p>
+                            {{p.name}}
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>
+                            <span class="glyphicon glyphicon-align-justify"></span>
+                            <span style="color: gray;">{{p.shopname}}</span>
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p style="float: right;margin-right: 10px">
+                            <span>{{p.shopaddress}}</span>
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<!--5、分页-->
+<div class="row">
+    <div class="col-lg-12">
+        <div id="dvpage" style="text-align: center"></div>
+    </div>
+</div>
+<!--6、商品-->
+</div>
+<!--7、底部-->
+<div class="layui-row layui-col-space18 layui-bg-orange">
+    <div class="layui-col-md4">
+        <div class="item">
+            <img alt="" src="//gtms04.alicdn.com/tps/i4/TB1ON87HVXXXXcVXpXXieo_0pXX-288-177.png" style="float: left">
+        </div>
+    </div>
+    <img alt="" src="//img.alicdn.com/tps/i3/TB1naO0IFXXXXXsXFXXIU.iNXXX-332-76.png" >
+    <div style="margin-right: 5px" >
+        <a href="//itunes.apple.com/cn/app/tao-bao-tiao-zao-jie-qing/id510909506">
+            <img src="//img.alicdn.com/tps/i4/TB1VO4WHVXXXXcKXFXXfBBiHXXX-200-62.png" style="margin-right: 5px;float: left">
+        </a>
+        <a href="http://www.appchina.com/">
+            <img src="//img.alicdn.com/tps/i2/TB1aOKTHVXXXXXdXpXXfBBiHXXX-200-62.png">
+        </a>
+        <img src="//gw.alicdn.com/tfs/TB1SK8Ow3HqK1RjSZJnXXbNLpXa-260-260.png" style="float: right; width: 100px; height: 100px">
+    </div>
+</div>
+<script>
+    var layer;
+    layui.use(['laypage','layer'], function(){
+        var laypage = layui.laypage;
+        layer=layui.layer;
+        //执行一个laypage实例
+        laypage.render({
+            elem: 'dvpage' //注意，这里的 test1 是 ID，不用加 # 号
+            ,count: 1000 //数据总数，从服务端得到
+        });
+    });
+    var appData=new Vue({
+        el:'#dvdata',
+        data:{
+            obj:{
+                code:0,
+                msg:'OK',
+                data:[
+                    {
+                        id:1,
+                        imgurl:'https://img.alicdn.com/bao/uploaded/i4/O1CN01zbwlhd1mbg8C51BMk_!!0-fleamarket.jpg_728x728.jpg',
+                        name:'四个可爱毛绒玩具，一个毛绒钥匙链 娃娃太多，所以想',
+                        price:35,
+                        orders:999,
+                        shopname:'t****6',
+                        shopaddress:'芝麻信用 优秀'
+
+                    },
+                    {
+                        id:2,
+                        imgurl:'https://img.alicdn.com/bao/uploaded/i3/O1CN01cxSg3G1HPzwQuRLJt_!!0-fleamarket.jpg_728x728.jpg',
+                        name:'薰衣草小熊布娃娃泰迪熊公仔大熊毛绒玩具熊抱抱熊生…',
+                        price:88.88,
+                        orders:9999,
+                        shopname:'t****王',
+                        shopaddress:'河南 郑州'
+
+                    },
+                    {
+                        id:3,
+                        imgurl:'http://img4.imgtn.bdimg.com/it/u=3863710847,2820277857&fm=200&gp=0.jpg',
+                        name:'萌乎原创春款女童襦裙改良汉服中式唐装中国风儿童连衣裙公主裙',
+                        price:88.88,
+                        orders:999,
+                        shopname:'徐徐然0',
+                        shopaddress:'河南 郑州'
+
+                    },
+                    {
+                        id:4,
+                        imgurl:'http://img4.imgtn.bdimg.com/it/u=3863710847,2820277857&fm=200&gp=0.jpg',
+                        name:'萌乎原创春款女童襦裙改良汉服中式唐装中国风儿童连衣裙公主裙',
+                        price:88.88,
+                        orders:999,
+                        shopname:'徐徐然0',
+                        shopaddress:'河南 郑州'
+
+                    },
+                    {
+                        id:5,
+                        imgurl:'http://img4.imgtn.bdimg.com/it/u=3863710847,2820277857&fm=200&gp=0.jpg',
+                        name:'萌乎原创春款女童襦裙改良汉服中式唐装中国风儿童连衣裙公主裙',
+                        price:88.88,
+                        orders:999,
+                        shopname:'徐徐然0',
+                        shopaddress:'河南 郑州'
+
+                    },
+                    {
+                        id:6,
+                        imgurl:'http://img4.imgtn.bdimg.com/it/u=3863710847,2820277857&fm=200&gp=0.jpg',
+                        name:'萌乎原创春款女童襦裙改良汉服中式唐装中国风儿童连衣裙公主裙',
+                        price:88.88,
+                        orders:999,
+                        shopname:'徐徐然0',
+                        shopaddress:'河南 郑州'
+
+                    },
+                    {
+                        id:7,
+                        imgurl:'http://img4.imgtn.bdimg.com/it/u=3863710847,2820277857&fm=200&gp=0.jpg',
+                        name:'萌乎原创春款女童襦裙改良汉服中式唐装中国风儿童连衣裙公主裙',
+                        price:88.88,
+                        orders:999,
+                        shopname:'徐徐然0',
+                        shopaddress:'河南 郑州'
+
+                    },
+                    {
+                        id:8,
+                        imgurl:'http://img4.imgtn.bdimg.com/it/u=3863710847,2820277857&fm=200&gp=0.jpg',
+                        name:'萌乎原创春款女童襦裙改良汉服中式唐装中国风儿童连衣裙公主裙',
+                        price:88.88,
+                        orders:999,
+                        shopname:'徐徐然0',
+                        shopaddress:'河南 郑州'
+
+                    },
+                    {
+                        id:9,
+                        imgurl:'http://img4.imgtn.bdimg.com/it/u=3863710847,2820277857&fm=200&gp=0.jpg',
+                        name:'萌乎原创春款女童襦裙改良汉服中式唐装中国风儿童连衣裙公主裙',
+                        price:88.88,
+                        orders:999,
+                        shopname:'徐徐然0',
+                        shopaddress:'河南 郑州'
+
+                    },
+                    {
+                        id:10,
+                        imgurl:'http://img4.imgtn.bdimg.com/it/u=3863710847,2820277857&fm=200&gp=0.jpg',
+                        name:'萌乎原创春款女童襦裙改良汉服中式唐装中国风儿童连衣裙公主裙',
+                        price:88.88,
+                        orders:999,
+                        shopname:'徐徐然0',
+                        shopaddress:'河南 郑州'
+
+                    },
+                    {
+                        id:11,
+                        imgurl:'http://img4.imgtn.bdimg.com/it/u=3863710847,2820277857&fm=200&gp=0.jpg',
+                        name:'萌乎原创春款女童襦裙改良汉服中式唐装中国风儿童连衣裙公主裙',
+                        price:88.88,
+                        orders:999,
+                        shopname:'徐徐然0',
+                        shopaddress:'河南 郑州'
+
+                    },
+                    {
+                        id:12,
+                        imgurl:'http://img4.imgtn.bdimg.com/it/u=3863710847,2820277857&fm=200&gp=0.jpg',
+                        name:'萌乎原创春款女童襦裙改良汉服中式唐装中国风儿童连衣裙公主裙',
+                        price:88.88,
+                        orders:999,
+                        shopname:'徐徐然0',
+                        shopaddress:'河南 郑州'
+
+                    },
+                    {
+                        id:13,
+                        imgurl:'http://img4.imgtn.bdimg.com/it/u=3863710847,2820277857&fm=200&gp=0.jpg',
+                        name:'萌乎原创春款女童襦裙改良汉服中式唐装中国风儿童连衣裙公主裙',
+                        price:88.88,
+                        orders:999,
+                        shopname:'徐徐然0',
+                        shopaddress:'河南 郑州'
+
+                    },
+                    {
+                        id:14,
+                        imgurl:'http://img4.imgtn.bdimg.com/it/u=3863710847,2820277857&fm=200&gp=0.jpg',
+                        name:'萌乎原创春款女童襦裙改良汉服中式唐装中国风儿童连衣裙公主裙',
+                        price:88.88,
+                        orders:999,
+                        shopname:'徐徐然0',
+                        shopaddress:'河南 郑州'
+
+                    },
+                    {
+                        id:15,
+                        imgurl:'http://img4.imgtn.bdimg.com/it/u=3863710847,2820277857&fm=200&gp=0.jpg',
+                        name:'萌乎原创春款女童襦裙改良汉服中式唐装中国风儿童连衣裙公主裙',
+                        price:88.88,
+                        orders:999,
+                        shopname:'徐徐然0',
+                        shopaddress:'河南 郑州'
+
+                    },
+                    {
+                        id:16,
+                        imgurl:'http://img4.imgtn.bdimg.com/it/u=3863710847,2820277857&fm=200&gp=0.jpg',
+                        name:'萌乎原创春款女童襦裙改良汉服中式唐装中国风儿童连衣裙公主裙',
+                        price:88.88,
+                        orders:999,
+                        shopname:'徐徐然0',
+                        shopaddress:'河南 郑州'
+
+                    },
+                ]
+
+            }
+        },
+        methods:{
+            spdetail:function (id) {
+                layer.msg('你查看商品：id='+id);
+            }
+        }
+    })
+</script>
+<script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function(){
+        var element = layui.element;
+
+        //…
+    });
+</script>
+
+<script>
+    layui.use('carousel', function(){
+        var carousel = layui.carousel;
+        //建造实例
+        carousel.render({
+            elem: '#test1'
+            ,width: '100%' //设置容器宽度
+            ,arrow: 'always' //始终显示箭头
+            //,anim: 'updown' //切换动画方式
+        });
+    });
+</script>
+
+</body>
+</html>

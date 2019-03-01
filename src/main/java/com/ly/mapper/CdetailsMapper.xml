@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ly.mapper.CdetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.ly.pojo.Cdetails" >
+    <id column="cid" property="cid" jdbcType="INTEGER" />
+    <result column="cname" property="cname" jdbcType="VARCHAR" />
+    <result column="descride" property="descride" jdbcType="VARCHAR" />
+    <result column="cimg" property="cimg" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="VARCHAR" />
+    <result column="evaluation" property="evaluation" jdbcType="VARCHAR" />
+    <result column="launchtime" property="launchtime" jdbcType="TIMESTAMP" />
+    <result column="soldouttime" property="soldouttime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    cid, cname, descride, cimg, price, evaluation, launchtime, soldouttime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_cdetails
+    where cid = #{cid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_cdetails
+    where cid = #{cid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.ly.pojo.Cdetails" >
+    insert into t_cdetails (cid, cname, descride, 
+      cimg, price, evaluation, 
+      launchtime, soldouttime)
+    values (#{cid,jdbcType=INTEGER}, #{cname,jdbcType=VARCHAR}, #{descride,jdbcType=VARCHAR}, 
+      #{cimg,jdbcType=VARCHAR}, #{price,jdbcType=VARCHAR}, #{evaluation,jdbcType=VARCHAR}, 
+      #{launchtime,jdbcType=TIMESTAMP}, #{soldouttime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ly.pojo.Cdetails" >
+    insert into t_cdetails
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="cid != null" >
+        cid,
+      </if>
+      <if test="cname != null" >
+        cname,
+      </if>
+      <if test="descride != null" >
+        descride,
+      </if>
+      <if test="cimg != null" >
+        cimg,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="evaluation != null" >
+        evaluation,
+      </if>
+      <if test="launchtime != null" >
+        launchtime,
+      </if>
+      <if test="soldouttime != null" >
+        soldouttime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="cid != null" >
+        #{cid,jdbcType=INTEGER},
+      </if>
+      <if test="cname != null" >
+        #{cname,jdbcType=VARCHAR},
+      </if>
+      <if test="descride != null" >
+        #{descride,jdbcType=VARCHAR},
+      </if>
+      <if test="cimg != null" >
+        #{cimg,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="evaluation != null" >
+        #{evaluation,jdbcType=VARCHAR},
+      </if>
+      <if test="launchtime != null" >
+        #{launchtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="soldouttime != null" >
+        #{soldouttime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ly.pojo.Cdetails" >
+    update t_cdetails
+    <set >
+      <if test="cname != null" >
+        cname = #{cname,jdbcType=VARCHAR},
+      </if>
+      <if test="descride != null" >
+        descride = #{descride,jdbcType=VARCHAR},
+      </if>
+      <if test="cimg != null" >
+        cimg = #{cimg,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="evaluation != null" >
+        evaluation = #{evaluation,jdbcType=VARCHAR},
+      </if>
+      <if test="launchtime != null" >
+        launchtime = #{launchtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="soldouttime != null" >
+        soldouttime = #{soldouttime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where cid = #{cid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ly.pojo.Cdetails" >
+    update t_cdetails
+    set cname = #{cname,jdbcType=VARCHAR},
+      descride = #{descride,jdbcType=VARCHAR},
+      cimg = #{cimg,jdbcType=VARCHAR},
+      price = #{price,jdbcType=VARCHAR},
+      evaluation = #{evaluation,jdbcType=VARCHAR},
+      launchtime = #{launchtime,jdbcType=TIMESTAMP},
+      soldouttime = #{soldouttime,jdbcType=TIMESTAMP}
+    where cid = #{cid,jdbcType=INTEGER}
+  </update>
+</mapper>
